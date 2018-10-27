@@ -1,0 +1,44 @@
+<div class="modal-demo">
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <ul>
+                <li ng-repeat="item in controller.items">
+                    <a href="#" ng-click="$event.preventDefault(); controller.selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ controller.selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="controller.ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="controller.cancel()">Cancel</button>
+        </div>
+    </script>
+    <script type="text/ng-template" id="stackedModal.html">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title-{{name}}">The {{name}} modal!</h3>
+        </div>
+        <div class="modal-body" id="modal-body-{{name}}">
+            Having multiple modals open at once is probably bad UX but it's technically possible.
+        </div>
+    </script>
+
+    <button type="button" class="btn btn-default" ng-click="controller.open()">Open me!</button>
+    <button type="button" class="btn btn-default" ng-click="controller.open('lg')">Large modal</button>
+    <button type="button" class="btn btn-default" ng-click="controller.open('sm')">Small modal</button>
+    <button type="button" 
+        class="btn btn-default" 
+        ng-click="controller.open('sm', '.modal-parent')">
+            Modal appended to a custom parent
+    </button>
+    <button type="button" class="btn btn-default" ng-click="controller.toggleAnimation()">Toggle Animation ({{ controller.animationsEnabled }})</button>
+    <button type="button" class="btn btn-default" ng-click="controller.openComponentModal()">Open a component modal!</button>
+    <button type="button" class="btn btn-default" ng-click="controller.openMultipleModals()">
+        Open multiple modals at once 
+    </button>
+    <div ng-show="controller.selected">Selection from a modal: {{ controller.selected }}</div>
+    <div class="modal-parent">
+    </div>
+</div>

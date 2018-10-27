@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<title>AngularJS UIBootstrap</title>
+<!-- There's a later version but only 3.3.7 is tested according to documentation -->
+<!-- https://angular-ui.github.io/bootstrap/ -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="app">
+
+  <h1>AngularJS with UIBoostrap</h1>
+  <p>Beginners examples with AngularJS and UIBoostrap</p>
+
+  <div ng-controller="ListController as controller">
+    <h2>List Controller</h2>
+    <p>Simple controller with a list</p>
+    <ol>
+      <li ng-repeat="item in controller.list">{{ item.name }} age {{ item.age }}</li>
+    </ol>
+  </div>
+  
+  <h2>UIBoostrap</h2>
+  <p>The following examples are from <a href="https://angular-ui.github.io/bootstrap/">UIBootstrap</a> but re-written to components. Not all are implemented.</p>
+  
+  <h3>Content</h3>
+  <ul>
+    <li><a href="#accordion">Accordion</a></li>
+    <li><a href="#alert">Alert</a></li>
+    <li><a href="#buttons">Buttons</a></li>
+    <li><a href="#carousel">Carousel</a></li>
+    <li><a href="#collapse">Collapse</a></li>
+    <li><a href="#datepicker">Datepicker</a></li>
+    <li><a href="#dropdown">Dropdown</a></li>
+    <li><a href="#modal">Modal</a></li>
+    <li><a href="#tabs">Tabs</a></li>
+  </ul>
+  
+  <h2>Examples</h2>
+  <p>Most examples as components.</p>
+  
+  <h3><a id="accordion">#</a> Accordion</h3>
+  <accordion></accordion>
+  
+  <h3><a id="alert">#</a> Alert</h3>
+  <alert></alert>
+  
+  <h3><a id="buttons">#</a> Buttons</h3>
+  <buttons></buttons>
+  
+  <h3><a id="carousel">#</a> Carousel</h3>
+  <carousel></carousel>
+  
+  <h3><a id="collapse">#</a> Collapse</h3>
+  <collapse></collapse>
+  
+  <h3><a id="dateparser">#</a> Dateparser</h3>
+  <dateparser></dateparser>
+  
+  <h3><a id="datepicker">#</a> Datepicker</h3>
+  <datepicker></datepicker>
+  
+  <h3><a id="dropdown">#</a> Dropdown</h3>
+  <dropdown></dropdown>
+  
+  <h3><a id="modal">#</a> Modal</h3>
+  <modal></modal>
+  
+  <h3><a id="tabs">#</a> Tabs</h3>
+  <tabs></tabs>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-animate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-touch.js"></script>
+  <!-- There are different versions here -->
+  <!-- https://github.com/angular-ui/bootstrap/tree/gh-pages -->
+  <!-- https://github.com/angular-ui/bootstrap/wiki/FAQ -->
+  <!-- https://cdnjs.com/libraries/angular-ui-bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
+  
+  <script src="js/angularjs/app.module.js"></script>
+  <script src="js/angularjs/components/accordion.component.js"></script>
+  <script src="js/angularjs/components/alert.component.js"></script>
+  <script src="js/angularjs/components/buttons.component.js"></script>
+  <script src="js/angularjs/components/carousel.component.js"></script>
+  <script src="js/angularjs/components/collapse.component.js"></script>
+  <script src="js/angularjs/components/dateparser.component.js"></script>
+  <script src="js/angularjs/components/datepicker.component.js"></script>
+  <script src="js/angularjs/components/dropdown.component.js"></script>
+  <script src="js/angularjs/components/modal.component.js"></script>
+  <script src="js/angularjs/components/tabs.component.js"></script>
+  <script src="js/angularjs/controllers/modal.controller.js"></script>
+</body>
+</html>
